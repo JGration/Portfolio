@@ -5,7 +5,7 @@
   --secondary-text-color: #212121;
   --heading-sec-color: #cccccc;
   --img-fill-color: #f3f3f3;
-  --text-font-family: "Pt Sans";
+  --text-font-family: "PT Sans", sans-serif;
   --heading-font-family: "Raleway";
   --f-xxs: 10px;
   --f-xs: 13px;
@@ -31,7 +31,6 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   height: 100%;
-  line-height: 1.6;
   color: var(--primary-text-color);
   background-color: var(--bg-primary-color);
   margin: 0;
@@ -133,8 +132,7 @@ h6 {
 }
 .description {
   max-width: 60%;
-  margin: 20px 0;
-  &.right{
+  &.right {
     margin-left: auto;
     max-width: 80%;
     @media (max-width: 768px) {
@@ -152,19 +150,19 @@ h6 {
   }
 }
 
-.middle{
+.middle {
   text-align: right;
   background-color: var(--bg-second-color);
   background-clip: padding-box;
   max-width: none;
   .container {
-    &.exp{
+    &.exp {
       max-width: 80%;
       margin: 0 auto;
-      p, h1{
+      p,
+      h1 {
         color: var(--secondary-text-color);
       }
-      
     }
   }
 }
@@ -172,9 +170,9 @@ h6 {
 section + section {
   //padding: 0 0 200px 0;
 }
-svg{
+svg {
   fill: #ffffff;
-  &:hover{
+  &:hover {
     fill: var(--primary-text-color);
   }
 }
@@ -190,7 +188,23 @@ svg{
 
 .text-animation .letter {
   display: inline-block;
-  opacity: 0;  
+  opacity: 0;
   line-height: 1.5em;
   font-size: clamp(4px, 6vw, 80px);
+}
+
+.code {
+  font-weight: 400;
+  margin: 4px 0;
+  color: #c0a67e;
+  font-family: monospace;
+  font-style: italic;
+  font-size: clamp(15px, 4vw, var(--f-xxs));
+}
+.bottom-left {
+  text-align: right;
+}
+.bottom-right {
+  text-align: left;
+  color: #3a3a3a;
 }
