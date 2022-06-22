@@ -3,10 +3,13 @@
   <section class="start">
     <app-home [@fadeState]="state"></app-home>
   </section>
-  <section class="middle" scroll-check [@scroll]="scroll" (scrollState)="scroll = $event">
+  <section class="middle-1" scroll-check [@scroll]="scroll" (scrollState)="scroll = $event">
     <app-about [@rightSlideState]="state" *ngIf="scroll === 'show'"></app-about>
   </section>
   <div id="about"></div>
+  <section class="middle-2">
+    <app-works></app-works>
+  </section>
   <div style="height: 500px;"></div>
   <app-footer></app-footer>
 </div>

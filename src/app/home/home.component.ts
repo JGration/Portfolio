@@ -75,6 +75,9 @@ export class HomeComponent implements AfterViewInit {
           TYPE_AFTER_MS
         )
     ).then(function resolve () {
+
+      
+
       setTimeout(function timeout () {
         var cursor = document.querySelector<HTMLElement>('.cursor')
         cursor?.parentNode?.removeChild(cursor)

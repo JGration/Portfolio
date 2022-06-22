@@ -150,7 +150,7 @@ h6 {
   }
 }
 
-.middle {
+.middle-1 {
   text-align: right;
   background-color: var(--bg-second-color);
   background-clip: padding-box;
@@ -207,4 +207,9 @@ svg {
 .bottom-right {
   text-align: left;
   color: #3a3a3a;
+}
+
+
+.two-section {
+  display: flex;
 }
