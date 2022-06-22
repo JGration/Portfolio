@@ -6,7 +6,7 @@
   left: 0;
   z-index: 100;
   @media (max-width: 768px) {
-    font-size: 0.6em;
+    font-size: var(--f-xxs);
   }
 }
 .nav-logo {
@@ -31,12 +31,12 @@
   position: absolute;
   top: 25%;
   right: 0;
-  font-size: 0.9em;
+  font-size: var(--f-md);
   font-family: "poppins";
   @media (max-width: 1023px) {
     width: 77%;
     top: 30%;
-    font-size: 1em;
+    font-size: var(--f-lg);
   }
 }
 

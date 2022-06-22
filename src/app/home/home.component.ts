@@ -10,22 +10,25 @@ import anime from 'animejs'
   animations: Animations.animate
 })
 export class HomeComponent implements AfterViewInit {
-  state = "inactive";
+  state = 'inactive'
 
   constructor () {}
 
-  ngOnInit(): void {
+  ngOnInit (): void {
     this.state === 'inactive'
     setTimeout(() => {
       this.state = 'active'
-    }, 4500);
+    }, 4500)
   }
 
   ngAfterViewInit () {
     const element = document.querySelector<HTMLElement>('.text-animation')
-    const lettersHtml =
+    var lettersHtml =
       element?.textContent?.replace(/\S/g, '<span class="letter">$&</span>') ||
       ''
+    lettersHtml = lettersHtml.replace('<span class="letter">D</span>',
+      '<span class="letter">&nbsp</span><span class="letter">D</span>'
+    )
     element!.innerHTML = `<div class="letters">${lettersHtml}</div><span class="cursor"></span>`
     element!.style.display = 'block'
 
@@ -71,12 +74,11 @@ export class HomeComponent implements AfterViewInit {
           },
           TYPE_AFTER_MS
         )
-    )
-      .then(function resolve () {
-        setTimeout(function timeout () {
-          var cursor = document.querySelector<HTMLElement>('.cursor')
-          cursor?.parentNode?.removeChild(cursor)
-        }, 8000)
-      })
+    ).then(function resolve () {
+      setTimeout(function timeout () {
+        var cursor = document.querySelector<HTMLElement>('.cursor')
+        cursor?.parentNode?.removeChild(cursor)
+      }, 8000)
+    })
   }
 }

@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Animations } from './animations'
+var mobile = require('is-mobile');
 
 @Component({
   selector: 'app-root',
@@ -18,5 +19,9 @@ export class AppComponent {
     setTimeout(() => {
       this.state = 'active'
     }, 300)
+    if(mobile()){
+      this.scroll = 'show'
+    }
   }
+
 }

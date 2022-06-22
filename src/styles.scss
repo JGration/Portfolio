@@ -7,7 +7,7 @@
   --img-fill-color: #f3f3f3;
   --text-font-family: "Pt Sans";
   --heading-font-family: "Raleway";
-  --f-xxs: 12px;
+  --f-xxs: 10px;
   --f-xs: 13px;
   --f-sm: 14px;
   --f-md: 16px;
@@ -91,11 +91,11 @@ h6 {
 
 .big-heading {
   margin: 0;
-  font-size: clamp(4px, 8vw, 80px);
+  font-size: clamp(4px, 6vw, 80px);
 }
 .medium-heading {
   margin: 0;
-  font-size: clamp(4px, 8vw, 60px);
+  font-size: clamp(4px, 6vw, 60px);
 }
 .subtitle {
   color: var(--green);
@@ -137,6 +137,9 @@ h6 {
   &.right{
     margin-left: auto;
     max-width: 80%;
+    @media (max-width: 768px) {
+      max-width: none;
+    }
   }
   @media (max-width: 768px) {
     max-width: none;
@@ -188,10 +191,6 @@ svg{
 .text-animation .letter {
   display: inline-block;
   opacity: 0;  
-  @media (max-width: 768px) {
-    font-size: 0.8em;
-  }
-  @media (max-width: 425px) {
-    font-size: 0.55em;
-  }
+  line-height: 1.5em;
+  font-size: clamp(4px, 6vw, 80px);
 }

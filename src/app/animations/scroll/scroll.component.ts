@@ -24,7 +24,6 @@ export class ScrollComponent{
       if (scrollPosition >= componentPosition - 500) {
         this.scrollState.emit('show')
       }
-      
      }
     else{
       this.scrollState.emit('show')
