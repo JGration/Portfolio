@@ -13,7 +13,7 @@ export class FooterComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    this.state === 'inactive'
+    
     setTimeout(() => {
       this.state = 'active'
     }, 300);

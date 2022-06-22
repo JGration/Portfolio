@@ -59,7 +59,6 @@
 
   .path {
     position: absolute;
-    z-index: 1;
     margin: 0 auto;
     .hex {
       $hexagon-size: 500px;
@@ -73,7 +72,7 @@
       width: ($hexagon-size * 0.645);
 
       height: $hexagon-size;
-      border-radius: ($hexagon-size / 10);
+      border-radius: calc($hexagon-size / 10);
       transition: transform 400ms ease;
 
       &:hover {

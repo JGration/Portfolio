@@ -56,6 +56,7 @@ export class Animations {
         transition('show => hide', animate('1400ms ease-out')),
         transition('hide => show', animate('1400ms ease-out'))
       ])
+
     ]
   }
 }

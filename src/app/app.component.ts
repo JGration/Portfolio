@@ -15,7 +15,7 @@ export class AppComponent {
   scroll = 'hide'
   
   ngOnInit (): void {
-    this.state === 'inactive'
+    
     setTimeout(() => {
       this.state = 'active'
     }, 300)

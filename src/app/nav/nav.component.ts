@@ -13,7 +13,7 @@ export class NavComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    this.state === 'inactive'
+    
     setTimeout(() => {
       this.state = 'active'
     }, 1000);

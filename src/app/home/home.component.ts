@@ -15,7 +15,7 @@ export class HomeComponent implements AfterViewInit {
   constructor () {}
 
   ngOnInit (): void {
-    this.state === 'inactive'
+    
     setTimeout(() => {
       this.state = 'active'
     }, 4500)
