@@ -1,0 +1,29 @@
+.two-section{
+  display: flex;
+  .skills{
+    display: inline-flex;
+    color: var(--primary-text-color);
+    background-color: var(--bg-primary-color);
+    align-items: center;
+    justify-content: center;
+    svg{
+      max-height: 55px;
+    }
+    &__row{
+      width: 30%;
+      display: inline-flex;
+      flex-direction: column;
+      text-align: center;
+      font-family: montserrat, sans-serif;
+      font-size: 0.8rem;
+      font-weight: 600;
+
+    }
+    &__item{
+      min-width: 150px;
+      @media (max-width: 1023px) {
+        min-width: 60px;
+      }
+    }
+  }
+}

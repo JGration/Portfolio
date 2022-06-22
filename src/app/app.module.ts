@@ -7,8 +7,8 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { NavComponent } from './nav/nav.component';
 import { FooterComponent } from './footer/footer.component';
-import { ExperienceComponent } from './experience/experience.component';
 import { ScrollComponent } from './animations/scroll/scroll.component';
+import { AboutComponent } from './about/about.component';
 
 @NgModule({
   declarations: [
@@ -16,8 +16,8 @@ import { ScrollComponent } from './animations/scroll/scroll.component';
     HomeComponent,
     NavComponent,
     FooterComponent,
-    ExperienceComponent,
-    ScrollComponent
+    ScrollComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,

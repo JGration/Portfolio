@@ -4,8 +4,9 @@
     <app-home [@fadeState]="state"></app-home>
   </section>
   <section class="middle" scroll-check [@scroll]="scroll" (scrollState)="scroll = $event">
-    <app-experience [@rightSlideState]="state" *ngIf="scroll === 'show'"></app-experience>
+    <app-about [@rightSlideState]="state" *ngIf="scroll === 'show'"></app-about>
   </section>
+  <div id="about"></div>
   <div style="height: 500px;"></div>
   <app-footer></app-footer>
 </div>
