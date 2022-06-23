@@ -29,6 +29,12 @@ const bottomEndSlide = style({
   opacity: 1,
   transform: 'translate(0)'
 })
+const hiddenScroll = style({
+  opacity: 0
+})
+const visibleScroll = style({
+  opacity: 1
+})
 
 export class Animations {
   static animate = Animations.getAnimations()
@@ -50,11 +56,15 @@ export class Animations {
         state('active', rightEndSlide),
         transition('inactive => active', animate('1s ease-in-out'))
       ]),
-      trigger('scroll', [
+      trigger('scrollSlide', [
         state('hide', rightStartSlide),
         state('show', rightEndSlide),
-        transition('show => hide', animate('1400ms ease-out')),
         transition('hide => show', animate('1400ms ease-out'))
+      ]),
+      trigger('scroll', [
+        state('hide', hiddenScroll),
+        state('show', visibleScroll),
+        transition('hide => show', animate('3s ease-in-out'))
       ])
 
     ]

@@ -1,15 +1,4 @@
 .two-section {
-  @media (max-width: 1024px) {
-    flex-direction: column;
-    .skills {
-      order: 2;
-      padding-top: 15%;
-    }
-    .about {
-      order: 1;
-    }
-  }
-
   .skills {
     position: relative;
     display: inline-flex;

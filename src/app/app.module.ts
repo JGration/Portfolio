@@ -10,6 +10,8 @@ import { FooterComponent } from './footer/footer.component';
 import { ScrollComponent } from './animations/scroll/scroll.component';
 import { AboutComponent } from './about/about.component';
 import { WorksComponent } from './works/works.component';
+import { ContactComponent } from './contact/contact.component';
+import { ButtonComponent } from './button/button.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +21,9 @@ import { WorksComponent } from './works/works.component';
     FooterComponent,
     ScrollComponent,
     AboutComponent,
-    WorksComponent
+    WorksComponent,
+    ContactComponent,
+    ButtonComponent
   ],
   imports: [
     BrowserModule,

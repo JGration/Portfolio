@@ -11,7 +11,9 @@ var mobile = require('is-mobile')
 export class AppComponent {
   title = 'portfolio'
   state = 'inactive'
+  scrollSlide = 'hide'
   scroll = 'hide'
+  scroll2 = 'hide'
 
   ngOnInit (): void {
     setTimeout(() => {
@@ -19,6 +21,8 @@ export class AppComponent {
     }, 300)
     if (mobile()) {
       this.scroll = 'show'
+      this.scroll2 = 'show'
+      this.scrollSlide = 'show'
     }
   }
 }

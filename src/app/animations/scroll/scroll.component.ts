@@ -21,7 +21,7 @@ export class ScrollComponent{
     const scrollPosition = window.scrollY
 
     if (!mobile()) {
-      if (scrollPosition >= componentPosition - 500) {
+      if (scrollPosition >= componentPosition - 600) {
         this.scrollState.emit('show')
       }
      }

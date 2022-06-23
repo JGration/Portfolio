@@ -1,0 +1,52 @@
+
+$brand-primary: var(--primary-text-color);
+$brand-secondary: var(--secondary-text-color);
+$swipe-duration: 0.5s;
+
+// Right Left
+
+.right-left{
+  background: linear-gradient(90deg, $brand-primary 50%, $brand-secondary 50%);
+  &:after{
+      background: linear-gradient(90deg, transparent 50%, $brand-primary 50%);
+  }
+}
+
+.right-left,
+.right-left:after {
+  background-position: 0;
+}
+
+.right-left:hover,
+.right-left:hover:after {
+  background-position: 100%;
+}
+
+// Generic Button Styles
+
+.swipe-button{
+  border: 2px solid $brand-primary;
+  padding: 12px 30px;
+  display: inline-block;
+  margin: auto;
+  position: relative;
+  cursor: pointer;
+  box-sizing: border-box;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  &:after{
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+  }
+}
+
+.swipe-button,
+.swipe-button:after {
+  background-size: 210% 200%;
+  transition: all $swipe-duration ease-in-out;
+}
