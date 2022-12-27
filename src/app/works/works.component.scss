@@ -104,16 +104,22 @@
         .wrapper {
           transition: all 1s;
           &.barings {
-            background: url("../../assets/barings.png") center / cover no-repeat;
+            background: url("../../assets/img/barings.png") center / cover no-repeat;
           }
           &.rwjf {
-            background: url("../../assets/rwjf.png") center / cover no-repeat;
+            background: url("../../assets/img/rwjf.png") center / cover no-repeat;
           }
           &.prst {
-            background: url("../../assets/prstlife.jpg") center / cover no-repeat;
+            background: url("../../assets/img/prstlife.jpg") center / cover no-repeat;
           }
           &.rastreio {
-            background: url("../../assets/rastreioontrack.jpg") center / cover;
+            background: url("../../assets/img/rastreioontrack.jpg") center / cover;
+          }
+          &.sprouts{
+            background: url("../../assets/img/sprouts.jpg") center / cover no-repeat;
+          }
+          &.ruse{
+            background: url("../../assets/img/ruse.jpg") center / cover no-repeat;
           }
           &::before {
             content: "\A";
