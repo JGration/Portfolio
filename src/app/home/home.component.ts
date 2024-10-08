@@ -1,4 +1,4 @@
-import { Component, AfterViewInit } from '@angular/core';
+import { Component, AfterViewInit, HostListener } from '@angular/core';
 import { Animations } from '../animations';
 import anime from 'animejs';
 
@@ -10,13 +10,44 @@ import anime from 'animejs';
 })
 export class HomeComponent implements AfterViewInit {
   state = 'inactive';
+  el: any;
 
   constructor() {}
 
   ngOnInit(): void {
+    this.triggerFadeInAnimation();
+  }
+
+  private triggerFadeInAnimation(): void {
     setTimeout(() => {
       this.state = 'active';
     }, 4000);
+  }
+
+  @HostListener('window:keydown', ['$event'])
+  handleKeyboardEvent(event: KeyboardEvent): void {
+    if (event.key === 'Tab') {
+      this.focusNextElement();
+    }
+  }
+
+  private focusNextElement(): void {
+    const focusableElements = this.el.nativeElement.querySelectorAll(
+      'a[href], button, textarea, input[type="text"], input[type="radio"], input[type="checkbox"], select'
+    );
+    const firstElement = focusableElements[0] as HTMLElement;
+    const lastElement = focusableElements[focusableElements.length - 1] as HTMLElement;
+
+    if (document.activeElement === lastElement) {
+      firstElement.focus();
+    } else {
+      for (let i = 0; i < focusableElements.length - 1; i++) {
+        if (focusableElements[i] === document.activeElement) {
+          (focusableElements[i + 1] as HTMLElement).focus();
+          break;
+        }
+      }
+    }
   }
 
   ngAfterViewInit() {
