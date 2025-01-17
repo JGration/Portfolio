@@ -1,5 +1,7 @@
 # Portfoliobackup
 
+You can access this portfolio via [https://jgration.github.io/portfolio/](https://jgration.github.io/portfolio/)
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.0.2.
 
 ## Development server
